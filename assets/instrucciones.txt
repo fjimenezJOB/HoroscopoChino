@@ -1,0 +1,10 @@
+Hacer el ejercicio del horoscopo
+
+- Logica de la app en terminal
+
+	- Que te metan el año que nació y decirle que horoscopo chino es.
+	- Que funcione en terminal(como en el diagrama)
+	- Mockup del proyecto en adobe xd
+	- Sacar El proyecto por web a traves de flask.
+
+Epieza en el 1900 hasta el 2020.

@@ -1,0 +1,16 @@
+<!-- Extension de base con jinja -->
+{% extends 'base.html' %}
+
+
+{% block header %}
+
+{% endblock %}
+
+{% block main %}
+<form action="/" method="POST">
+
+    <input type="number" name="anyo" id="" required autofocus>
+    <button type="submit">Enviar</button>
+
+</form>
+{% endblock %}
