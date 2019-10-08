@@ -4,6 +4,7 @@ from metodos import Metodos
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -13,15 +14,20 @@ def home():
 def ligica():
     global animal
     anyo = int(request.form['anyo'])
-    pregunta = Metodos(anyo)
-    animal = pregunta.calculo()
+    pregunta = Metodos()
+    animal = pregunta.calculo(anyo)
+
+    # Logica para texto
+    global texto
+    texto = pregunta.consultar(animal)
+    print(texto + '*'*50)
 
     return redirect(url_for('signo'))
 
 
 @app.route('/signo')
 def signo():
-    return render_template('signo.html', animal= animal)
+    return render_template('signo.html', animal=animal, texto=texto)
 
 
 @app.errorhandler(404)

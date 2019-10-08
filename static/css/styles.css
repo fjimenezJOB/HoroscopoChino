@@ -1,4 +1,5 @@
 body{
+    color: #fff;
     height: 100vh;
     background: url('../img/fondo.png');
     display: grid;
@@ -9,7 +10,7 @@ body{
     grid-template-areas: 
     " header header header "
     " main main main "
-    " footer footer footer "
+    " footer footer footer ";
 }
 
 header{
@@ -18,30 +19,56 @@ header{
     justify-content: center;
     align-items: center;
     grid-template-areas:
-    " . titulo . "
+    " . titulo . ";
 }
+
+        .titulo{
+            grid-area: titulo;
+            font-size: 60px;
+        }
 main{
     display: grid;
     grid-area: main;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
-    " . logo . "  
-}
-.animal{
-    grid-area: animal;
-}
-.titulo{
-    grid-area: titulo;
-    font-size: 60px;
+    " animal logo compatibilidad ";
 }
 .logo{
     grid-area: logo;
     font-size: 60px;
-
+    
 }
-.logo__subtitulo{
-    font-size: 30px;
-    display: column;
+
+.animal{
+    grid-area: animal;
+    width: 30rem;
+    height: 30rem;
+}
+
+footer{
+    display: grid;
+    grid-area: footer;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    " nombre explicacion explicacion ";
+}
+.nombre_animal{
+    grid-area: nombre;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.5rem;
+    
+}
+.texto_animal{
+    grid-area: explicacion;
+    font-size: 1.5rem;
+    text-align: justify;
+    justify-self: start;
+    align-self: center;
+    padding: 0 10rem;
 
 }

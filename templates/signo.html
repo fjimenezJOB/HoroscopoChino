@@ -1,12 +1,21 @@
 {% extends 'base.html' %}
 
+{% block header %}
+
+{% endblock %}
+
 {% block main %}
 
 <figure class="animal">
     {% set bicho_ruta = 'img/' + animal + '.svg' %}
         <img src="{{ url_for('static', filename=bicho_ruta) }}" alt="{{ animal }}">
-    <figcaption>{{ animal }}</figcaption>
+    
 </figure>
-    <a href="{{ url_for('home') }}">Volver</a>
+    <a class="volver" href="{{ url_for('home') }}">Volver</a>
 
+{% endblock %}
+
+{% block footer %}
+    <h1 class="nombre_animal" >{{ animal }}</h1>
+    <p class="texto_animal">{{ texto }}</p>
 {% endblock %}
